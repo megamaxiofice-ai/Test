@@ -1,0 +1,112 @@
+:root {
+  color-scheme: dark;
+  --bg: #11141b;
+  --panel: #1b2130;
+  --border: #2d3750;
+  --accent: #dd9f3b;
+  --text: #e4e7f2;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+}
+
+h1,
+h2,
+p {
+  margin: 0.35rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: calc(100vh - 90px);
+}
+
+.map-panel {
+  border-right: 1px solid var(--border);
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.hud {
+  overflow: auto;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+button,
+select {
+  margin-top: 0.35rem;
+  margin-right: 0.35rem;
+  border: 1px solid var(--border);
+  background: #202944;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+ul {
+  margin: 0.35rem 0;
+  padding-left: 1rem;
+}
+
+.tempo-controls,
+.action-row,
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs .tab {
+  display: none;
+}
+
+.tabs .tab.active {
+  display: block;
+}
+
+.tab-buttons .active {
+  border-color: var(--accent);
+  background: #2f3b63;
+}
+
+.log-entry {
+  border-bottom: 1px dashed var(--border);
+  padding: 0.25rem 0;
+}
+
+.country-label {
+  font-size: 11px;
+  color: #0b0d13;
+  font-weight: 600;
+}
